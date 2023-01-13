@@ -1,11 +1,15 @@
 .container {
-   margin: 0; 
-   padding: 0; 
+   max-width: 960px;
+    margin: 10px auto; 
+   padding: 10px; 
    display: grid; 
-   grid-template-columns: repeat(3,1fr) ; 
+   grid-template-columns: repeat(autofill,minmax(200px,1 fr)); 
    /*row-gap: 3px ; 
    column-gap: 3px;*/ 
-   gap: 10px;
+   gap: 10px; 
+   /*grid-template-rows: repeat(3, 1fr);*/ 
+   /*align-items:center;*/ 
+   
 }
 .item{
     background-color: rgb(39, 105, 130); 
@@ -14,3 +18,8 @@
     font-size: 20px; 
     color: aliceblue;
 } 
+@media (max-width:500px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
